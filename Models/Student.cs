@@ -6,6 +6,10 @@
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         public DateTime EnrollmentDate { get; set; }
-        public ICollection<Enrollment> Enrollments { get; set; } 
+        public ICollection<Enrollment> Enrollments { get; set; }
+        public Student()
+        {
+            Enrollments = new List<Enrollment>();
+        }
     }
 }
