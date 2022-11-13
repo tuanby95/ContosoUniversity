@@ -11,6 +11,7 @@ builder.Services.AddDbContext<SchoolContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
+
 using var scope = app.Services.CreateScope();
 SchoolContext context = scope.ServiceProvider.GetRequiredService<SchoolContext>();
 DbInitializer.Initialize(context);
