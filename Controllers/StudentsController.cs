@@ -104,7 +104,6 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LastName,FirstMidName,EnrollmentDate")] Student student)
         {
-            Console.WriteLine(ModelState.IsValid);
             try
             {
                 if (ModelState.IsValid)
